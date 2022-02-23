@@ -143,6 +143,7 @@ img {vertical-align: middle;}
 
 var stopAuto=0;
 function plusSlides(n) {
+  var slides = document.getElementsByClassName("mySlides");
   slideIndex += n
   if (slideIndex > slides.length) {slideIndex = 1} 
   showSlides();
@@ -150,6 +151,7 @@ function plusSlides(n) {
 }
 
 function currentSlide(n) {
+  var slides = document.getElementsByClassName("mySlides");
   slideIndex = n
   if (slideIndex > slides.length) {slideIndex = 1}  
   showSlides();
