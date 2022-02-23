@@ -143,12 +143,16 @@ img {vertical-align: middle;}
 
 var stopAuto=0;
 function plusSlides(n) {
-  showSlides(slideIndex += n);
+  slideIndex += n
+  if (slideIndex > slides.length) {slideIndex = 1} 
+  showSlides();
   stopAuto=1;
 }
 
 function currentSlide(n) {
-  showSlides(slideIndex = n);
+  slideIndex = n
+  if (slideIndex > slides.length) {slideIndex = 1}  
+  showSlides();
   stopAuto=1;
 }
 
